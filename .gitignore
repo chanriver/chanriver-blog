@@ -1,7 +1,7 @@
 # Hugo
 public/
 resources/_gen/
-hugo.exe.lock
+hugo.exe.lock`n.hugo_build.lock
 
 # 本地编辑残留
 .DS_Store
@@ -14,3 +14,4 @@ themes/*/
 
 # bin/ 是 Hugo 二进制目录，不入 git
 bin/
+
