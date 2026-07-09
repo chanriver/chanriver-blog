@@ -1,0 +1,16 @@
+# Hugo
+public/
+resources/_gen/
+hugo.exe.lock
+
+# 本地编辑残留
+.DS_Store
+Thumbs.db
+*.log
+
+# 主题可选：如果你要 fork 改主题就把 themes/* 去掉
+themes/*/
+!themes/PaperMod/
+
+# bin/ 是 Hugo 二进制目录，不入 git
+bin/

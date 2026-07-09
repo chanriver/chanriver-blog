@@ -1,0 +1,82 @@
+baseURL = 'https://example.com/'
+title = '我的博客'
+theme = 'PaperMod'
+
+# 中文为主
+defaultContentLanguage = 'zh-cn'
+hasCJKLanguage = true
+defaultContentLanguageInSubdir = false
+
+# 每页显示 10 篇；摘要取 80 字
+paginate = 10
+summaryLength = 80
+
+# 输出
+enableRobotsTXT = true
+enableGitInfo = false
+
+[params]
+  env = 'production'
+  description = '一个用 Hugo + PaperMod 搭起来的零成本博客'
+  keywords = ['博客', 'Hugo', 'PaperMod', '个人']
+  author = 'RICERIVER'
+  DateFormat = '2006-01-02'
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  defaultTheme = 'auto'        # 跟随系统亮/暗模式
+  ShowCodeCopyButtons = true
+  disableSpecial1stPost = true
+  mainSections = ['posts']
+
+  # 首页副标题（首页大标题下的小字）
+  [params.homeInfoParams]
+    Title = 'Hi，这里是我的小角落'
+    Content = '''
+      记录折腾、笔记、和偶尔的碎碎念。
+      站由 Hugo + PaperMod 生成，托管在 Cloudflare Pages。
+    '''
+
+  # 社交链接（按需填用户名）
+  [[params.socialIcons]]
+    name = 'github'
+    title = 'GitHub'
+    url = 'https://github.com/'
+  [[params.socialIcons]]
+    name = 'rss'
+    title = 'RSS'
+    url = '/index.xml'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+
+# 文章按日期倒序
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+# 主菜单
+[[menu.main]]
+  identifier = 'posts'
+  name = '文章'
+  url = '/posts/'
+  weight = 10
+[[menu.main]]
+  identifier = 'archive'
+  name = '归档'
+  url = '/archives/'
+  weight = 20
+[[menu.main]]
+  identifier = 'about'
+  name = '关于'
+  url = '/about/'
+  weight = 30
+
