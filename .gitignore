@@ -1,17 +1,17 @@
 # Hugo
 public/
 resources/_gen/
-hugo.exe.lock`n.hugo_build.lock
+hugo.exe.lock
+.hugo_build.lock
 
 # 本地编辑残留
 .DS_Store
 Thumbs.db
 *.log
 
-# 主题可选：如果你要 fork 改主题就把 themes/* 去掉
+# 主题（用 submodule 引用时不要把内容入库）
 themes/*/
 !themes/PaperMod/
 
 # bin/ 是 Hugo 二进制目录，不入 git
 bin/
-
