@@ -9,9 +9,8 @@ hugo.exe.lock
 Thumbs.db
 *.log
 
-# 主题（用 submodule 引用时不要把内容入库）
-themes/*/
-!themes/PaperMod/
-
 # bin/ 是 Hugo 二进制目录，不入 git
 bin/
+
+# tmp 是临时下载区，不入 git
+tmp/
